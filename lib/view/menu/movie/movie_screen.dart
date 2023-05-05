@@ -2,14 +2,14 @@ import "package:cached_network_image/cached_network_image.dart";
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:provider/provider.dart";
-import "package:shimmer/shimmer.dart";
 import "package:technical_elemes/utils/enum.dart";
 import "package:technical_elemes/view/menu/movie/now_playing_movie_screen.dart";
-import 'package:technical_elemes/view/menu/movie/search_movie_screen.dart';
 import "package:technical_elemes/view/menu/movie/top_rated_screen.dart";
 import 'package:technical_elemes/viewmodel/provider/movieprovider/now_playing_movie_provider.dart';
 import 'package:technical_elemes/viewmodel/provider/movieprovider/top_rated_movie_provider.dart';
 import "package:technical_elemes/viewmodel/provider/movieprovider/upcoming_movie_provider.dart";
+
+import '../../../widgets/search_movie_widget.dart';
 
 class MovieScreen extends StatefulWidget {
   const MovieScreen({super.key});
@@ -109,24 +109,8 @@ class _MovieScreenState extends State<MovieScreen> {
                     builder: (context, TopRatedMovieProvider valueTopRatedMovie,
                         child) {
                       if (valueTopRatedMovie.state == ResultState.loading) {
-                        // TODO: Fixing shimmer effect
                         return const Center(
                             child: CircularProgressIndicator.adaptive());
-                        // Shimmer.fromColors(
-                        //   baseColor: Colors.red,
-                        //   highlightColor: Colors.green,
-                        //   child: Container(
-                        //     height: 300,
-                        //     width: 300,
-                        //     // child: ListView.builder(
-                        //     //   shrinkWrap: true,
-                        //     //   physics: const NeverScrollableScrollPhysics(),
-                        //     //   itemBuilder: (context, index) {
-                        //     //     return Container();
-                        //     //   },
-                        //     // ),
-                        //   ),
-                        // );
                       } else if (valueTopRatedMovie.state ==
                           ResultState.hasData) {
                         return SizedBox(
@@ -318,7 +302,6 @@ class _MovieScreenState extends State<MovieScreen> {
                             SizedBox(
                                 height: 300,
                                 width: MediaQuery.of(context).size.width,
-                                
                                 child: ListView.builder(
                                   itemCount: valueUpcomingMovie
                                       .upcomingMovie!.results.length,
@@ -372,36 +355,4 @@ class _MovieScreenState extends State<MovieScreen> {
   }
 }
 
-class SearchWidget extends StatelessWidget {
-  const SearchWidget({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50.0,
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(10),
-          ),
-          color: Colors.white),
-      child: Form(
-        child: TextFormField(
-          readOnly: true,
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SearchMovieScreen(),
-              )),
-          decoration: const InputDecoration(
-            border: InputBorder.none,
-            hintText: "Search",
-            contentPadding: EdgeInsets.only(left: 20.0),
-          ),
-        ),
-      ),
-    );
-  }
-}

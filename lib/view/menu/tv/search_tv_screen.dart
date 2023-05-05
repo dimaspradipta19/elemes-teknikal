@@ -123,6 +123,5 @@ class _SearchTvScreenState extends State<SearchTvScreen> {
         ),
       ),
     );
-    ;
   }
 }

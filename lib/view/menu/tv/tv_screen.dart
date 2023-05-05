@@ -9,6 +9,7 @@ import 'package:technical_elemes/viewmodel/provider/tvprovider/popular_tv_provid
 import 'package:technical_elemes/viewmodel/provider/tvprovider/top_rated_tv_provider.dart';
 
 import '../../../utils/enum.dart';
+import '../../../widgets/search_tv_widget.dart';
 import '../movie/movie_screen.dart';
 
 class TvScreen extends StatefulWidget {
@@ -245,41 +246,6 @@ class _TvScreenState extends State<TvScreen> {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-
-class SearchTvWidget extends StatelessWidget {
-  const SearchTvWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50.0,
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(10),
-          ),
-          color: Colors.white),
-      child: Form(
-        child: TextFormField(
-          readOnly: true,
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SearchTvScreen(),
-              )),
-          decoration: const InputDecoration(
-            border: InputBorder.none,
-            hintText: "Search",
-            contentPadding: EdgeInsets.only(left: 20.0),
-          ),
         ),
       ),
     );
