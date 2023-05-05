@@ -1,16 +1,23 @@
 # technical_elemes
 
-A new Flutter project.
+Teknikal tes Junior Flutter Developer Elemes Group,
 
-## Getting Started
+Fitur yang terdapat pada aplikasi ini adalah
+- Movie Section
+    - Top Rated Movie
+    - Now Playing Movie
+    - Upcomming movie
+    - Search Movie
 
-This project is a starting point for a Flutter application.
+- TV Section
+    - Top Rated Movie
+    - Popular TV Show
+    - Search for Tv Show
 
-A few resources to get you started if this is your first Flutter project:
+## Penginstalan Aplikasi
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Download/clone git repository ini
+- selanjutnya masuk kedalam folder berikut ini :
+    - build/app/outputs/flutter-apk/app-release.apk
+- pindahkan kedalam smarphtone berbasis android
+- Installasi
