@@ -19,5 +19,5 @@ Fitur yang terdapat pada aplikasi ini adalah
 - Download/clone git repository ini
 - selanjutnya masuk kedalam folder berikut ini :
     - build/app/outputs/flutter-apk/app-release.apk
-- pindahkan kedalam smarphtone berbasis android
-- Installasi
+- pindahkan kedalam smartphone berbasis android
+- Installasi dan jalankan aplikasinya
