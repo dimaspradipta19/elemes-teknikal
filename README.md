@@ -3,6 +3,8 @@
 Teknikal tes Junior Flutter Developer Elemes Group,
 
 Fitur yang terdapat pada aplikasi ini adalah
+- Splashscreen yang berisikan loading indicator & Text "Movie App"
+- Status loading ketika data aplikasi sedang dimuat(fetch)
 - Movie Section
     - Top Rated Movie
     - Now Playing Movie
